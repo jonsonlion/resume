@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2021-02-01 09:38:57
+ * @LastEditTime: 2021-02-01 10:11:01
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: /resume/webpack-dist.config.js
+ */
 const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
@@ -59,7 +67,7 @@ module.exports = {
       // 调用 Chrome 渲染出 PDF 文件
       const chromePath = findChrome();
       spawnSync(chromePath, ['--headless', '--disable-gpu', `--print-to-pdf=${path.resolve(outputPath, 'resume.pdf')}`,
-        'http://resume.wuhaolin.cn' // 这里注意改成你的在线简历的网站
+        'https://jonsonlion.github.io/resume/' // 这里注意改成你的在线简历的网站
       ]);
     }),
   ]
